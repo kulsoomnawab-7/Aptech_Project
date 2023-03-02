@@ -394,7 +394,11 @@ width:100%;
 					</div>
 
 
-
+<div class="container">
+  <div class="row"><div class="col-md-12">
+    <h1>Semester</h1>
+  </div></div>
+</div>
                     <div class="layout-978 text-center">
 <div class="tblcontainer text-center">
   @foreach($exam as $e)

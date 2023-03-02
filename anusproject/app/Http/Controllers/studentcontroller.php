@@ -6,7 +6,8 @@ use App\Models\user;
 use App\Models\usermodels;
 use App\Models\lab_system;
 use App\Models\complain__master;
-use DB;                                                                                             
+use DB;                  
+use Carbon\Carbon;                                                                           
 use Illuminate\Http\Request;
 
 class studentcontroller extends Controller
@@ -29,8 +30,9 @@ class studentcontroller extends Controller
             session(["sessionid"=>$login->id]);
             session(["sessionusername"=>$login->name]);
             session(["sessionuseremail"=>$login->email]);     
-            session()->has('Login_post') ;
-            $student_data = DB::table('examsubjectmasters')->where('Curr_ID' , session('Login_post'))->orderBy('id','desc')->limit('1')->get();
+            session()->get('Login_post') ;
+            // echo $login->email;
+            $student_data = DB::table('examsubjectmasters')->where('Curr_ID' , session('sessionid'))->orderBy('id','desc')->limit('1')->get();
             return view('student_dashboard',compact('student_data'));
           
         }
@@ -152,14 +154,17 @@ class studentcontroller extends Controller
     }
     public function exam_fetch(Request $req)
     {
-        
-    if(session()->get('Login_post')){
-        $exam = DB::table('examsubjectmasters')->where('Curr_ID' , session()->get('Login_post'))->orderBy('id','asc')->get();
-        $exam = DB::table('examsubjectmasters')->where('Curr_ID' , session()->get('Login_post'))->orderBy('id','asc')->get();
-        return view('examfetch',compact('exam'));}
+        $examfetchall = Carbon::now();
+        $examfetchall->toDateTimeString();
+
+    if(session()->has('sessionid')){
+        $exam = DB::table('examsubjectmasters')->where('Curr_ID' , session()->get('sessionid'))->orderBy('id','asc')->get();
+        $exam = DB::table('examsubjectmasters')->where('Curr_ID' , session()->get('sessionid'))->orderBy('id','asc')->get();
+        $fetchexamalls = DB::table('examsubjectmasters')->whereDate('date_of_reg' , '<' , $examfetchall)->get();
+        return view('examfetch',compact('exam'));
+    }
         
     }
 
-    
     
 }
