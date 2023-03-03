@@ -396,12 +396,60 @@ width:100%;
 
 <div class="container">
   <div class="row"><div class="col-md-12">
-    <h1>Semester</h1>
-  </div></div>
+    <h1 class="text-center" style="font-size:100px;">Semester
+   6
+  </h1>
+   
+  </div>
+
+</div>
 </div>
                     <div class="layout-978 text-center">
 <div class="tblcontainer text-center">
   @foreach($exam as $e)
+<table class="datagrid " >
+    <thead >
+        <tr >
+           
+            <th>ID</th>
+            <th>EXAM TYPE </th>
+            <th>SUBJECT</th>
+            <th>Marks</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{$e->id}}</td>
+            <td>{{$e->ExamType}}</td>
+            <td>{{$e->Subject}}</td>
+        
+
+    </tbody>
+</table>
+  
+  
+  
+  @endforeach
+  
+</div>
+</div>
+
+<!-- prev -->
+
+<div class="container">
+  <div class="row"><div class="col-md-12">
+    <h1 class="text-center" style="font-size:100px;">Semester
+   5
+  </h1>
+   
+  </div>
+
+</div>
+</div>
+<div class="layout-978 text-center">
+<div class="tblcontainer text-center">
+  @foreach($fetchexam1 as $e)
 <table class="datagrid " >
     <thead >
         <tr >
@@ -421,16 +469,160 @@ width:100%;
 
     </tbody>
 </table>
-  
-  
-  
   @endforeach
   
 </div>
 </div>
 
 
+<div class="container">
+  <div class="row"><div class="col-md-12">
+    <h1 class="text-center" style="font-size:100px;">Semester
+   4
+  </h1>
+   
+  </div>
 
+</div>
+</div>
+<div class="layout-978 text-center">
+<div class="tblcontainer text-center">
+  @foreach($fetchexam2 as $e)
+<table class="datagrid " >
+    <thead >
+        <tr >
+           
+            <th>ID</th>
+          
+            <th>EXAM TYPE </th>
+            <th>SUBJECT</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{$e->id}}</td>
+            <td>{{$e->ExamType}}</td>
+            <td>{{$e->Subject}}</td>
+
+    </tbody>
+</table>
+  @endforeach
+  
+</div>
+</div>
+
+<div class="container">
+  <div class="row"><div class="col-md-12">
+    <h1 class="text-center" style="font-size:100px;">Semester
+   3
+  </h1>
+   
+  </div>
+
+</div>
+</div>
+<div class="layout-978 text-center">
+<div class="tblcontainer text-center">
+  @foreach($fetchexam3 as $e)
+<table class="datagrid " >
+    <thead >
+        <tr >
+           
+            <th>ID</th>
+          
+            <th>EXAM TYPE </th>
+            <th>SUBJECT</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{$e->id}}</td>
+            <td>{{$e->ExamType}}</td>
+            <td>{{$e->Subject}}</td>
+
+    </tbody>
+</table>
+  @endforeach
+  
+</div>
+</div>
+
+<div class="container">
+  <div class="row"><div class="col-md-12">
+    <h1 class="text-center" style="font-size:100px;">Semester
+   2
+  </h1>
+   
+  </div>
+
+</div>
+</div>
+<div class="layout-978 text-center">
+<div class="tblcontainer text-center">
+  @foreach($fetchexam4 as $e)
+<table class="datagrid " >
+    <thead >
+        <tr >
+           
+            <th>ID</th>
+          
+            <th>EXAM TYPE </th>
+            <th>SUBJECT</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{$e->id}}</td>
+            <td>{{$e->ExamType}}</td>
+            <td>{{$e->Subject}}</td>
+
+    </tbody>
+</table>
+  @endforeach
+  
+</div>
+</div>
+
+<div class="container">
+  <div class="row"><div class="col-md-12">
+    <h1 class="text-center" style="font-size:100px;">Semester
+   1
+  </h1>
+   
+  </div>
+
+</div>
+</div>
+<div class="layout-978 text-center">
+<div class="tblcontainer text-center">
+  @foreach($fetchexam5 as $e)
+<table class="datagrid " >
+    <thead >
+        <tr >
+           
+            <th>ID</th>
+          
+            <th>EXAM TYPE </th>
+            <th>SUBJECT</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{$e->id}}</td>
+            <td>{{$e->ExamType}}</td>
+            <td>{{$e->Subject}}</td>
+
+    </tbody>
+</table>
+  @endforeach
+  
+</div>
+</div>
+<!-- end prev -->
 
                     <footer class="footer">
           <div class="footer-wrap">

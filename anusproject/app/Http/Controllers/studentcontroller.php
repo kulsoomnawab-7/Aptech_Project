@@ -159,9 +159,15 @@ class studentcontroller extends Controller
 
     if(session()->has('sessionid')){
         $exam = DB::table('examsubjectmasters')->where('Curr_ID' , session()->get('sessionid'))->orderBy('id','asc')->get();
-        $exam = DB::table('examsubjectmasters')->where('Curr_ID' , session()->get('sessionid'))->orderBy('id','asc')->get();
-        $fetchexamalls = DB::table('examsubjectmasters')->whereDate('date_of_reg' , '<' , $examfetchall)->get();
-        return view('examfetch',compact('exam'));
+        // $details = DB::join('examsubjectmasters','examsubjectmasters.Curr_ID','=','modulars.id')->get(["examsubjectmasters.*","modulars.*"]);
+
+        $exam = DB::table('examsubjectmasters')->where('Curr_ID' , session()->get('sessionid'))->get();
+        $fetchexam1 = DB::table('examsubjectmasters')->where('Sem_ID'  , '=',5)->get();
+        $fetchexam2 = DB::table('examsubjectmasters')->where('Sem_ID'  , '=',4)->get();
+        $fetchexam3 = DB::table('examsubjectmasters')->where('Sem_ID'  , '=',3)->get();
+        $fetchexam4 = DB::table('examsubjectmasters')->where('Sem_ID'  , '=',2)->get();
+        $fetchexam5 = DB::table('examsubjectmasters')->where('Sem_ID'  , '=',1)->get();
+        return view('examfetch',compact('exam','fetchexam1','fetchexam2','fetchexam3','fetchexam4','fetchexam5'));
     }
         
     }
