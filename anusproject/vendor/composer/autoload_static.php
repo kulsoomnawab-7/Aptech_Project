@@ -581,6 +581,7 @@ class ComposerStaticInitca7d5bd7a950788edc34efe079dcb132
         'App\\Models\\Labs' => __DIR__ . '/../..' . '/app/Models/Labs.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\basicinfo' => __DIR__ . '/../..' . '/app/Models/basicinfo.php',
+        'App\\Models\\examsubjectmaster' => __DIR__ . '/../..' . '/app/Models/examsubjectmaster.php',
         'App\\Models\\usermodels' => __DIR__ . '/../..' . '/app/Models/usermodels.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

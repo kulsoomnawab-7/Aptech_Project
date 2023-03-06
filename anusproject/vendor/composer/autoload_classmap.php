@@ -30,6 +30,7 @@ return array(
     'App\\Models\\Labs' => $baseDir . '/app/Models/Labs.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\basicinfo' => $baseDir . '/app/Models/basicinfo.php',
+    'App\\Models\\examsubjectmaster' => $baseDir . '/app/Models/examsubjectmaster.php',
     'App\\Models\\usermodels' => $baseDir . '/app/Models/usermodels.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
