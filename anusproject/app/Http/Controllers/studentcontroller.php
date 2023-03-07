@@ -192,6 +192,9 @@ class studentcontroller extends Controller
     }
         
     }
-
+public function abs()
+{
+    
+}
     
 }
